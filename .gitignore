@@ -1,0 +1,65 @@
+# Build artifacts
+bin/
+obj/
+*.dll
+*.exe
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Visual Studio-specific files
+.vscode/
+.vs/
+*.vcxproj.user
+*.csproj.user
+*.dbmdl
+*.opendb
+
+# Logs and database files
+*.log
+*.sql
+*.sqlite
+
+# Sensitive files
+appsettings.json
+appsettings.*.json
+.env
+
+# System files
+Thumbs.db
+.DS_Store
+
+# IDE backups
+*.bak
+*.swp
+
+# NuGet packages
+*.nupkg
+packages/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Resharper
+_ReSharper*/
+*.DotSettings.user
+
+# Node.js dependencies (if applicable)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Publish outputs
+publish/
+wwwroot/
+
+# Git-related files
+*.orig
+
+# JetBrains Rider
+.idea/
+.idea_modules/
