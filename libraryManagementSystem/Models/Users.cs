@@ -2,12 +2,13 @@
 
 namespace libraryManagementSystem.Models
 {
-    public enum UserRole // #6 Enum
+    public enum UserRole // #6 Enum: Represents user roles such as Admin and Member.
     {
         Admin,
         Member
     }
 
+    // #1 Inheritance: Base class for all user types.
     public class User
     {
         // #1 Encapsulation: Fields are private, ensuring data cannot be accessed directly.
@@ -62,6 +63,7 @@ namespace libraryManagementSystem.Models
         public virtual string GetDetails() => $"{Name} ({Role}) - Email: {Email}";
     }
 
+    // #1 Inheritance (continued): Admin class inherits from User class.
     public class Admin : User
     {
         // #3 Constructor (continued): Child classes use base keyword to call the parent class constructor.
@@ -72,6 +74,7 @@ namespace libraryManagementSystem.Models
         public override string GetDetails() => $"{base.GetDetails()} [Admin Privileges]";
     }
 
+    // #1 Inheritance (continued): Member class inherits from User class.
     public class Member : User
     {
         public int BorrowLimit { get; private set; } = 5; // #2 Properties (continued): Read-only property.
